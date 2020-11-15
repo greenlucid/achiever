@@ -37,13 +37,12 @@ What if the Arbitrator is changed? This could be due to a variety of reasons: Ar
 
 We can add a `function changeArbitrator(...) external onlyGovernor;`, but what if the new Arbitrator has a different way of understanding `_extraData`? Then the normal approach would be create a new Arbitrable. But I just figured there is no need for that, there could be a decoding-contract standard.
 
-Note that, in order for this situation to happen, there is no need for the custom information in Arbitrable to be encoded, even if the contract just held an `ARBITRATOR_EXTRADATA` constant that was fed the same way to Arbitrator, the same problem quickly arises: different Arbitrators might use different ways to read this extradata, so it might get 
+Note that, in order for this situation to happen, there is no need for the custom information in Arbitrable to be encoded, even if the contract just held an `ARBITRATOR_EXTRADATA` constant that was fed the same way to Arbitrator, the same problem quickly arises: different Arbitrators might use different ways to read this extradata, so the need for creating new contracts would be inevitable if migration was needed.
 
 My suggestion is to make an ERC standard for decoding bytes for not only this use case, but all use cases in which there might be a new way to read encoded/decoded data. Makeshift-naming here: create an interface `IDecoder` that only has a:
 
 `function decode(bytes _data) external view returns(_bytes);`
 
-There you go. Now our Arbitrable contract can have a global variable `decoderContract`, and call its method whenever there is a need to decode, or even just feed data to an external contract. Obvious example is KlerosLiquid, that can only read `_extraData` a certain way. Just put a `function changeDecoder(...) external onlyGovernor;` somewhere, that constructs a new `decoderContract` from a new address. So, when eventually a change needs to be done, it should suffice with making a new IDecoder and linking it to the now-not-yet obsolete Arbitrable.
+There you go. Now our Arbitrable contract can have a global variable `decoderContract`, and call its method whenever there is a need to decode, or even just feed data to an external contract. Obvious example is KlerosLiquid, that can only read `_extraData` a certain way. Just put a `function changeDecoder(...) external onlyGovernor;` somewhere, that constructs a new `decoderContract` from a new address. So, when eventually a change needs to be done, it should suffice with deploying a new IDecoder contract that transforms the data to its needed form, and back in the Arbitrable having the governor call `changeDecoder`.
 
  Now our Arbitrable contract can go and change Arbitrator safely according to the ERC-792 standard. Please give me feedback so that I can know if I just reinvented the wheel, but anyway I know that, in case I build this, (and in case it wasn't made yet), I would like to be the "EIPs Champion" of this standard with this dapp. This could be implemented in other Kleros dapps too, so that if and when new Kleros Court contracts are made, the other dapps can update Arbitrator.
- 
