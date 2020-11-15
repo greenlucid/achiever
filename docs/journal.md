@@ -44,3 +44,24 @@ I'd hope I was at least able to have the smart contract finished in time, but th
 Kleros team has been helpful as usual, props to them. This has been a free turbo bootcamp so far for me. Anyway, I'm tired and realistic, I don't think I'm actually going to finish this in time, but I might cheat a bit and simplify appeal logic in order to finish faster and get some frontend + extra work done tomorrow. Will see, seeya.
 
 PD: Even though I haven't commited the contract here yet, [you can see the end-of-day-1 contract here](https://gist.github.com/greenlucid/d96a23c9f8c082ad3a3683f09fa2355e#file-achiever-sol).
+
+# Day 2
+
+Woke up and after a few delirious hours I finished all logic and math surrounding appeal. Dropped events all around and debugged the surface that there we go, Achiever.sol finished. I couldn't debug it for real because I don't know how to deploy it, and I don't know how to make a mockup Arbitrator either. Specifically, I could possibly know, but I didn't bother doing it because I don't have enough time to reinvent the wheel.
+
+This was the biggest exertion of effort I did so far into Solidity, changed a few things and, because of the to-be duplicated code (remember Achiever / Challenger? That came back to haunt me), I had to be very mindful of the naming I used. Math was hard and I got a bit obsessed about avoiding calling appealCost(...), among other things. The worst thing is that it didn't feel like yesterday, or the day before: I feel like the progress today was out of sheer luck, and I don't think I've learned anything out of this. Just felt tedium and got a headache.
+
+So, now it was a matter of managing to make the App. My knowledge of JavaScript and web development is short-lived, I only spent around 4 days reading [javascript.info](javascript.info), and jumped into [this course](fullstackopen.com), of which I only had time to do stuff for three consecutive days, not even finishing part2.
+
+It didn't surprise me that I got stuck. I took a 4h nap, woke up and decided to try anyway. I went with:
+
+`npx create-react-app ./web`, deleted stuff I didn't understand, `npm install web3`, and after making some components I realized that my chances of finishing an App with React without knowing how to use npm, or knowing what buttons to use were nil taking the deadline into account. Damn! So for know I've gone full *Software Engineer* style and wrote some specifications for the final product right where every *Software Engineer* should write them: in the comments.
+
+In a more serious note, I might put some more effort on getting some sort of dapp working. The steps would be:
+
+- Change specifications to purely functional and prototype based
+- Lurk around kleros github in something like [tokens-on-trial](https://github.com/kleros/tokens-on-trial) and find out how to make a damn button, among other generally useful things.
+- Review how state works in React just to make sure I don't have to redo everything afterwards
+- Actually build the dapp
+
+I'm a realistic-optimist, and the realistic portion of my ethos tells me there's just no way, so when this fails I will spend my time making a Policy for the to-be-finished Achiever, logo, call it a learning experience and go to bed earlier. Anyway, who knows what will? Let's hope for the best.
