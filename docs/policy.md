@@ -1,6 +1,6 @@
 # Achiever Policy and Ethos
 
-1. Arbitrator MUST arbitrate taking this Policy when ruling Vows from Achiever. If that ever stopped being the case, users of Achiever MUST choose another Arbitrator. This is an abstract Policy for all Vows, and creators of Vows are encouraged to redact a Policy for their own Vows to make things more clear.
+1. Arbitrator MUST arbitrate by this Policy when ruling Vows from Achiever. If that ever stopped being the case, users of Achiever MUST choose another Arbitrator. This is an abstract Policy for all Vows, and creators of Vows are encouraged to redact a Policy for their own Vows to make things more clear.
 
 2. Analysis
 
@@ -14,7 +14,7 @@ Evidence Y that proves X is defined as an effect with a set of possible past cau
 
 4. Validity of Evidence
 
-Arbitrator SHOULD dismiss invalid evidence. In order to be valid, the evidence is coupled with an objective explanation. This explanation should state why the evidence is evidence, in other words, should make it more evident. Examples are explaining the chances or providing links that support the position. Insults, subjectivity, morality, fabrication of evidence, and attempts at persuasion or rethoric SHOULD be dismissed as invalid.
+Arbitrator SHOULD dismiss invalid evidence. In order to be valid, the evidence is coupled with an objective explanation. This explanation should state why the evidence is evidence, in other words, it should make it more evident. Examples: explaining the chances or providing links that support the position. Insults, subjectivity, morality, fabrication of evidence, and attempts at persuasion or rethoric SHOULD be dismissed as invalid.
 
 5. Abstract Computer
 
