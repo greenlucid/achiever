@@ -14,9 +14,13 @@ const Vows = ({achieverContract, web3js}) => {
   
   const [vowList, setVowList] = useState([])
 
+  const vowfy = (vowEvent) => (
+    <Vow vowEvent={vowEvent} achieverContract={achieverContract} web3js={web3js}/>
+  )
+
   return (
   <div className="Vows">
-    {/*TODO*/}
+    {vowList.forEach(vowEvent => vowfy(vowEvent))}
   </div>
 )}
 

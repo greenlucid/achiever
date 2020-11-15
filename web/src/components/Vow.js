@@ -43,10 +43,16 @@
 
 import React, {useState} from "React"
 
-const Vow = () => (
+const Vow = ({vowEvent, achieverContract, web3js}) => {
+  
+  const dataFromVowEvent = (vowEvent) => (
+    0 // I'm stuck
+  )
+
+  return (
   <div className="Vow">
     {/*TODO*/}
   </div>
-)
+)}
 
 export default Vow;
