@@ -615,10 +615,6 @@ contract Achiever is IEvidence, IArbitrable {
         return false;
     }
     
-    function remainingForAchiever(uint _id) public view returns (uint) {
-        // returns remaining value to fully fund Fail side
-    }
-    
     function nextRoundStake(uint _id) public view returns (uint) {
         // This is the amount loser has to stake next round
         return ( disputes[_id].lastStake * appealMultiplier(_id) / MULTIPLIER_TO_DIV );
