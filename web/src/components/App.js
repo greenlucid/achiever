@@ -30,6 +30,7 @@ import Header from "./Header"
 import VowMakerButton from "./VowMaker"
 import Vows from "./Vows"
 import Footer from "./Footer"
+import achieverData from "../abi/achiever.js"
 
 const App = () => {
 
@@ -38,12 +39,14 @@ const App = () => {
   if (typeof web3 !== 'undefined') {
     web3js = new Web3(web3.givenProvider);
   }
+  const achieverContract = 
+    new web3js.eth.Contract(achieverData.abi, achieverData.address)
   
   return (
     <div className="App">
       <Header />
       <VowMakerButton />
-      <Vows />
+      <Vows achieverContract={achieverContract} web3js={web3js} />
       <Footer />
     </div>
   );

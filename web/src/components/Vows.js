@@ -10,7 +10,7 @@
 import React, {useState} from "React"
 import Vow from "./Vow"
 
-const Vows = () => {
+const Vows = ({achieverContract, web3js}) => {
   
   const [vowList, setVowList] = useState([])
 
