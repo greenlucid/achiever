@@ -32,6 +32,13 @@ import Vows from "./Vows"
 import Footer from "./Footer"
 
 const App = () => {
+
+  // For now, assume user will use a web3 provider.
+  let web3js = null;
+  if (typeof web3 !== 'undefined') {
+    web3js = new Web3(web3.givenProvider);
+  }
+  
   return (
     <div className="App">
       <Header />

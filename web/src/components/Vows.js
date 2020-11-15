@@ -7,12 +7,17 @@
  * 
  */
 
+import React, {useState} from "React"
 import Vow from "./Vow"
 
-const Vows = () => (
+const Vows = () => {
+  
+  const [vowList, setVowList] = useState([])
+
+  return (
   <div className="Vows">
     {/*TODO*/}
   </div>
-)
+)}
 
 export default Vows;

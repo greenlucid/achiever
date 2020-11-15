@@ -41,6 +41,8 @@
  * - Finally, if !paid, give a button for cashout.
  */
 
+import React, {useState} from "React"
+
 const Vow = () => (
   <div className="Vow">
     {/*TODO*/}

@@ -8,6 +8,8 @@
  * - total ETH in bonds.
  */
 
+import React, {useState} from "React"
+
 const Footer = () => (
   <div className="Footer">
     {/*TODO*/}
